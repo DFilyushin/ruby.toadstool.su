@@ -29,11 +29,16 @@ function init () {
     var myPlKsk9 = new ymaps.Placemark([52.268239, 76.943496], {content: 'КСК Кереку', balloonContent: 'КСК Кереку'});
     var myPlKsk10 = new ymaps.Placemark([52.300895, 76.919167], {content: 'КСК Береговое', balloonContent: 'КСК Береговое'});
     var myPlKsk11 = new ymaps.Placemark([52.293486, 76.938220], {content: 'КСК Томир', balloonContent: 'КСК Томир'});
-    var myPlKsk12 = new ymaps.Placemark([52.293486, 76.938220], {content: 'КСК Перфектум', balloonContent: 'КСК Перфектум'});
+    var myPlKsk12 = new ymaps.Placemark([52.292598, 76.938305], {content: 'КСК Перфектум', balloonContent: 'КСК Перфектум'});
     var myPlKsk13 = new ymaps.Placemark([52.292193, 76.959935], {content: 'КСК Северяне', balloonContent: 'КСК Северяне'});
     var myPlKsk14 = new ymaps.Placemark([52.268501, 76.961895], {content: 'КСК Ваш дом', balloonContent: 'КСК Ваш дом'});
     var myPlKsk15 = new ymaps.Placemark([52.251206, 76.953035], {content: 'ИП Искакова', balloonContent: 'ИП Искакова'});
-
+    var myPlKsk16 = new ymaps.Placemark([52.293949, 76.938169], {content: 'КСК Махаббат', balloonContent: 'КСК Махаббат'});
+    var myPlKsk17 = new ymaps.Placemark([52.287832, 76.965685], {content: 'City Group', balloonContent: 'Обсл. компания City Group'});
+    var myPlKsk18 = new ymaps.Placemark([52.266428, 76.962623], {content: 'ПКСК Лия', balloonContent: 'ПКСК Лия'});
+    var myPlKsk19 = new ymaps.Placemark([52.293359, 76.938176], {content: 'ИП Устинова Н.Ф.', balloonContent: 'ИП Устинова Н.Ф.'});
+    var myPlKsk20 = new ymaps.Placemark([52.293503, 76.938208], {content: 'КСК Комфорт+', balloonContent: 'Комфорт+'});
+    
     myMap.geoObjects.add(myPlKsk1);
     myMap.geoObjects.add(myPlKsk2);
     myMap.geoObjects.add(myPlKsk3);
@@ -49,9 +54,9 @@ function init () {
     myMap.geoObjects.add(myPlKsk13);
     myMap.geoObjects.add(myPlKsk14);
     myMap.geoObjects.add(myPlKsk15);
-    myPlacemark = new ymaps.Placemark([52.251206, 76.953035 ], { content: 'Москва!', balloonContent: 'Столица России' });
-
-    //objectManager.add(myPlacemark1);
-    //objectManager.add(myPlacemark2);
-    //objectManager.add(myPlacemark3);
+    myMap.geoObjects.add(myPlKsk16);
+    myMap.geoObjects.add(myPlKsk17);
+    myMap.geoObjects.add(myPlKsk18);
+    myMap.geoObjects.add(myPlKsk19);
+    myMap.geoObjects.add(myPlKsk20);
 }
