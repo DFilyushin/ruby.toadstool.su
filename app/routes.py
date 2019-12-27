@@ -12,6 +12,14 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/changelog')
+def changelog():
+    return render_template('changelog.html')
+
+@app.route('/news')
+def news():
+    return render_template('news.html')
+
 @app.route('/contacts', methods=['POST'])
 def send_contacts():
     form = request.form
