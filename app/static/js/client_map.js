@@ -9,13 +9,10 @@ function init () {
         }),
         objectManager = new ymaps.ObjectManager({
             clusterize: true,
-            gridSize: 64,
-            hasBalloon: false,
-            hasHint: false,
             clusterDisableClickZoom: true
         });
     objectManager.objects.options.set('preset', 'islands#blueCircleDotIcon');
-    objectManager.clusters.options.set('preset', 'islands#lightBlueClusterIcons');
+    objectManager.clusters.options.set('preset', 'islands#blueClusterIcons');
     myMap.geoObjects.add(objectManager);
 
     var myPlKsk1 = new ymaps.Placemark([52.278761, 76.969738], {content: 'ИП Ремсервис ПВ', balloonContent: 'ИП Ремсервис ПВ'});
@@ -38,7 +35,11 @@ function init () {
     var myPlKsk18 = new ymaps.Placemark([52.266428, 76.962623], {content: 'ПКСК Лия', balloonContent: 'ПКСК Лия'});
     var myPlKsk19 = new ymaps.Placemark([52.293359, 76.938176], {content: 'ИП Устинова Н.Ф.', balloonContent: 'ИП Устинова Н.Ф.'});
     var myPlKsk20 = new ymaps.Placemark([52.293503, 76.938208], {content: 'КСК Комфорт+', balloonContent: 'Комфорт+'});
-    
+    var myPlKsk21 = new ymaps.Placemark([52.293317, 76.938234], {content: 'Шанырак+', balloonContent: 'Шанырак'});
+    var myPlKsk22 = new ymaps.Placemark([52.293317, 76.938234], {content: 'ИП Миллер', balloonContent: 'ИП Миллер'});
+    var myPlKsk23 = new ymaps.Placemark([52.298098, 76.935693], {content: 'БЛАГОПОЛУЧИЕ', balloonContent: 'ТОО "УПРАВЛЯЮЩАЯ КОМПАНИЯ ОБЪЕДИНЕНИЯМИ СОБСТВЕННИКОВ ИМУЩЕСТВА "БЛАГОПОЛУЧИЕ""'});
+
+
     myMap.geoObjects.add(myPlKsk1);
     myMap.geoObjects.add(myPlKsk2);
     myMap.geoObjects.add(myPlKsk3);
@@ -59,4 +60,7 @@ function init () {
     myMap.geoObjects.add(myPlKsk18);
     myMap.geoObjects.add(myPlKsk19);
     myMap.geoObjects.add(myPlKsk20);
+    myMap.geoObjects.add(myPlKsk21);
+    myMap.geoObjects.add(myPlKsk22);
+    myMap.geoObjects.add(myPlKsk23);
 }
