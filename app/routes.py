@@ -48,6 +48,7 @@ def send_contacts():
         <strong>Тема:</strong> {}</br>
         <strong>Сообщение:</strong>{}<br>
         '''.format(user_name, email, subject, message)
+        mail.connect()
         mail.send(msg)
         data['success'] = True
         data['message'] = 'Сообщение успешно отправлено'
