@@ -2,8 +2,7 @@ import os
 from datetime import datetime
 from flask import render_template, send_from_directory, request, json, abort
 from flask_mail import Message
-from app import app, mail, db
-from app.models import DownloadStat
+from app import app, mail
 
 
 @app.route('/')
@@ -83,6 +82,8 @@ def get_last_file(path, ext):
                 files.append(item)
     if files:
         return sorted(files, key=lambda filename: datetime.fromtimestamp(filename.stat(follow_symlinks=False).st_ctime))[-1].name
+    else:
+        return []
 
 
 @app.route('/app/<path:filename>')
@@ -96,12 +97,6 @@ def send_files(filename):
     if filename == 'help_chm':
         file_item = get_last_file(app_path, 'chm')
     if not file_item:
-         abort(404)
+        abort(404)
 
-    ds = DownloadStat()
-    ds.ip = request.remote_addr
-    ds.filename = file_item
-    ds.downloaded = datetime.now()
-    db.session.add(ds)
-    db.session.commit()
     return send_from_directory('./static/application', file_item, as_attachment=True)
