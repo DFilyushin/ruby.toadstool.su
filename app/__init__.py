@@ -9,3 +9,5 @@ app.config.from_object(Config)
 
 mail = Mail(app)
 mail.init_app(app)
+
+from app import routes
