@@ -1,7 +1,6 @@
 FROM python:3.8-slim
 MAINTAINER dmitriy.filyushin@yandex.ru
 
-RUN mkdir /app
 WORKDIR /app
 
 # set environment variables
@@ -12,7 +11,7 @@ ENV PYTHONUNBUFFERED 1
 ADD requirements /app
 RUN pip install -r requirements
 
-COPY . /app
+COPY . .
 
 EXPOSE 5000
 
